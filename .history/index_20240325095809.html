@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiệu ứng slide</title>
+    <script type="text/javascript" src="./js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <style type="text/css">
+        #box{
+            width: 400px;
+            padding: 40px;
+            background: #e74c3c;
+            color: #fff;
+            text-align: center;
+            display: none;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // ẩn phần tử theo hướng cuộn lên
+            $("#effect-slideUp").click(function(){
+                $("#box").slideUp(1000);
+            });
+            // hiện phần tử theo hướng cuộn xuống
+            $("#effect-slideDown").click(function(){
+                $("#box").slideDown(1000);
+            });
+            // cuộn lên, hoặc cuộn xuống theo trang thái
+            $("#effect-slideToggle").click(function(){
+                $("#box").slideToggle(1000);
+            });
+        });
+
+    </script>
+    <h1>Hiệu ứng slide slideUp</h1>
+    <a href="#" id="effect-slideDown">slideDown</a>
+    <a href="#" id="effect-slideUp">slideUp</a>
+    <a href="#" id="effect-slideToggle">slideToggle</a>
+    <div id="box">
+        Box
+    </div>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse tenetur ad sunt mollitia ex maiores aspernatur dolorum dignissimos nobis suscipit accusamus porro culpa veniam nam, a voluptate tempore ullam perspiciatis Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse tenetur ad sunt mollitia ex maiores aspernatur dolorum dignissimos nobis suscipit accusamus porro culpa veniam nam, a voluptate tempore ullam perspiciatis.</p>
+</body>
+</html>
